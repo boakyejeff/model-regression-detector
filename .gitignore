@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated demo reports (regenerate with: python examples/demo.py)
+examples/report.md
+examples/report.html
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

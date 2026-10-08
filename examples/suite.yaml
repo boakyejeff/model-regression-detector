@@ -1,0 +1,38 @@
+# Example eval suite in YAML format.
+# Load with: EvalSuite.from_yaml("suite.yaml")
+name: example-suite
+metadata:
+  description: Small example showing every built-in scorer.
+cases:
+  - id: capitals-1
+    prompt: What is the capital of France?
+    scorer: exact_match
+    scorer_params:
+      expected: Paris
+    metadata:
+      category: factual
+
+  - id: keyword-1
+    prompt: Name a programming language used for data science.
+    scorer: contains
+    scorer_params:
+      substring: python
+    metadata:
+      category: open-ended
+
+  - id: math-1
+    prompt: What is 15% of 200? Reply with just the number.
+    scorer: numeric_tolerance
+    scorer_params:
+      expected: 30
+      tolerance: 0.5
+    metadata:
+      category: math
+
+  - id: format-1
+    prompt: Write a date in YYYY-MM-DD format for New Year's Day 2026.
+    scorer: regex_match
+    scorer_params:
+      pattern: "2026-01-01"
+    metadata:
+      category: formatting

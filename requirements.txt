@@ -1,0 +1,7 @@
+# Required
+pytest>=7
+pyyaml>=6
+
+# Optional: used for p-values when installed; pure-Python fallbacks are built in
+# numpy>=1.24
+# scipy>=1.10
